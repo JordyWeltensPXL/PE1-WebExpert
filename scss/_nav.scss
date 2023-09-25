@@ -1,0 +1,46 @@
+@mixin flex-extended {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    @include flex-extended;
+    padding: 1.15rem 5%;
+    font-size: 2rem;
+    color: #040D12;
+    font-weight: 800;
+    border-bottom: rgb(228, 228, 228) solid 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+
+    ul {
+        display: flex;
+        gap: 4rem;
+        font-size: 1.2rem;
+    }
+
+    li {
+        padding: .4rem;
+    }
+
+    li:nth-last-child(1) {
+        background-color: #8062D6;
+        color: white;
+        border-radius: 5px;
+        padding: .5rem 1rem;
+    }
+
+    li:nth-child(-n+3):hover {
+        border-bottom: #9400FF 1px solid;
+        transition: all .2s ease;
+    }
+}
+
+.active {
+    font-weight: bold;
+}
+

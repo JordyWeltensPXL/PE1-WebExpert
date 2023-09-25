@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gloock&family=Open+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Gloock&display=swap" rel="stylesheet">
+    <script defer src="main.js"></script>
 </head>
 <body>
     <nav>
@@ -32,14 +36,61 @@
         </div>
         <img src="./assets/main-cards.png" alt="pokemon cards">
         <img class="floater" src="./assets/rayquaza-c-lv.x-diamond-pearl-promos-dp47 (1).webp" alt="">
+        <img class="floater2" src="./assets/charizard-g-lv.x-diamond-pearl-promos-dp45.webp" alt="">
     </main>
     
     <section>
+        <h2>New <span>legendaries</span> available for a <span>limited time</span></h2>
         <div class="cards">
-            <div class="card"><a href="#"><img src="./assets/rayquaza-c-lv.x-diamond-pearl-promos-dp47 (1).webp" alt=""></a></div>
-            <div class="card"><a href="#"><img src="./assets/en_US-Promo_BW-BW37-kyurem_ex.webp" alt=""></a></div>
-            <div class="card"><a href="#"><img src="./assets/en_US-Promo_BW-BW38-zekrom_ex.webp" alt=""></a></div>
+            <div class="card" id="c1">
+                <a href="#"><img src="./assets/en_US-Promo_BW-BW36-reshiram_ex.png" alt=""></a>
+                <span>€13,99</span>
+                <h3>Legendary Reshiram</h3>
+                <div class="detail">
+                    <p>Black & White Promo Set</p>
+                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
+                </div> 
+            </div>
+            <div class="card" id="c2">
+                <a href="#"><img src="./assets/en_US-Promo_BW-BW37-kyurem_ex.webp" alt=""></a>
+                <span>€13,99</span>
+                <h3>Legendary Kyurem</h3>
+                <div class="detail">
+                    <p>Black & White Promo Set</p>
+                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
+                </div> 
+            </div>
+            <div class="card" id="c3">
+                <a href="#"><img src="./assets/en_US-Promo_BW-BW38-zekrom_ex.webp" alt=""></a>
+                <span>€13,99</span>
+                <h3>Legendary Zekrom</h3>
+                <div class="detail">
+                    <p>Black & White Promo Set</p>
+                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
+                </div> 
+            </div>
+            <div class="card" id="c4">
+                <a href="#"><img src="./assets/en_US-Promo_BW-BW45-mewtwo_ex.webp" alt=""></a>
+                <span>€13,99</span>
+                <h3>Legendary Mewtwo</h3>
+                <div class="detail">
+                    <p>Black & White Promo Set</p>
+                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
+                </div>   
+            </div>
+
         </div>  
     </section>
+
+    <footer>
+        <span>Contactgegevens</span>
+        <div class="socials">
+            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-facebook"></i></a>
+            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-twitter"></i></a>
+            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-instagram"></i></a>
+            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 </html>

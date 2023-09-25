@@ -2,6 +2,7 @@ main {
     padding: 10% 15%;
     display: flex;
     height: 100vh;
+    position: relative;
 
     h1 {
         font-size: 4rem;
@@ -39,4 +40,13 @@ main {
     left: 0;
     transform: rotate(15deg);
     filter: blur(5px)
+}
+
+.floater2 {
+    position: absolute;
+    width: 7%;
+    top: 0;
+    left: 500px;
+    transform: rotate(-43deg);
+    filter: blur(135px)
 }

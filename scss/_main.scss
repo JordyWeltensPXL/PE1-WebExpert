@@ -1,52 +1,102 @@
+@use '_global.scss' as *;
+
 main {
-    padding: 10% 15%;
-    display: flex;
-    height: 100vh;
-    position: relative;
+    .main-container{
+        @include flex(start);
+        align-items: start;
+        gap: 10%;
+        padding: 0 10%;
+        height: 100vh;
+        .title {
+            @include flex(start);
+            align-items: start;
+            flex-direction: column;
+            gap: 1rem;
+            width: 50%;
+            padding: 10% 5% 0% 5%;
+            h1 {
+                color: $white;
+                font-size: $fs-biggest;
+            }
+            p {
+                font-size: $fs-small;
+                line-height: 1.7;
+                color: $neutral-grey;
+                span {
+                    font-style: italic;
+                }
+            }
+            button {
+                padding: 16px 32px;
+                font-size: $fs-medium;
+                border: none;
+                background-color: linear-gradient(90deg, #3AAef8 0%, #9f62ed 100%);
+                color: $white;
+            }
+        }
+        .main-img {
+            height: 100%;
+            width: 30%;
+            position: relative;
+            z-index: 0;
+            .first-img {
+                position: absolute;
+                border-radius: 15px;
+                transform: scale(.7) rotate(10deg);
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                z-index: 1;
+                &:hover {
+                    transform: scale(.75);
+                    z-index: 3 !important;
+                    box-shadow: 0 0 200px 0 $accent;
+                }
+            }
 
-    h1 {
-        font-size: 4rem;
-        font-weight: 300;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        span {
-            font-weight: 700;
-            color: #040D12;
+            .second-img {
+                border-radius: 15px;
+                transform: scale(.6) rotate(-5deg);
+                position: absolute;
+                left: 150px;
+                top: 225px;
+                z-index: 2;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                &:hover {
+                    transform: scale(.65);
+                    box-shadow: 0 0 200px 0 $accent;
+                }
+            }
         }
     }
-    
-    p {
-        margin-bottom: 2rem;
-        font-style: italic;
-        span {
-            text-decoration: underline;
-        }
-    }
 
-    img {
-        width: 80%;
-        position: absolute;
-        width: 40%;
-        top: 60px;
-        right: 150px;
-        z-index: -1;
-    }
+/* BUTTON CSS */
+.button-primary {
+    margin-top: 3rem;
+  padding: 15px 30px 15px 0;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-image: linear-gradient(90deg, #3AAef8 0%, #B146FE  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.floater {
-    position: absolute;
-    width: 13%;
-    top: 725px;
-    left: 0;
-    transform: rotate(15deg);
-    filter: blur(5px)
+.button-primary:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-3px);
 }
 
-.floater2 {
-    position: absolute;
-    width: 7%;
-    top: 0;
-    left: 500px;
-    transform: rotate(-43deg);
-    filter: blur(135px)
+.button-primary:active {
+  transform: scale(0.95);
 }
+}
+

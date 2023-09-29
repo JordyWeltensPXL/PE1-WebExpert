@@ -1,47 +1,113 @@
-@mixin flex-extended {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+@use './global' as *;
 
 nav {
-    @include flex-extended;
-    padding: 1.15rem 5%;
-    font-size: 2rem;
-    color: #040D12;
-    font-weight: 800;
-    border-bottom: rgb(228, 228, 228) solid 1px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #FFF;
-    z-index: 1;
+    @include flex(space-between);
+    padding: 1rem 14.5%;
+    backdrop-filter: blur(px);
+    position: relative;
+    position: sticky;
 
-    ul {
-        display: flex;
-        gap: 4rem;
-        font-size: 1.2rem;
+    .logo {
+        font-size: $fs-big;
+        font-weight: $fw-bold;
     }
 
-    li {
-        padding: .4rem;
+    .hamburger-menu {
+        display: none;
+        cursor: pointer;
     }
 
-    li:nth-last-child(1) {
-        background-color: #8062D6;
-        color: white;
-        border-radius: 5px;
-        padding: .5rem 1rem;
+    .nav-links {
+
+        ul {
+            @include flex(center);
+            gap: 3rem;
+            font-size: $fs-small;
+            li {
+                color: $neutral-grey;
+                font-weight: $fw-medium;
+            }
+        }
+        .active {
+            color: $white;
+        }
+        a:hover {
+            color: $accent;
+        }
+
+        i {
+            position: relative;
+        }
+        span {
+            background-color: red;
+            padding: .3rem .5rem;
+            border-radius: 100vw;
+            font-size: $fs-smallest;
+            position: absolute;
+            top: -15px;
+            left: 12px;
+            color: $white;
+        }
     }
 
-    li:nth-child(-n+3):hover {
-        border-bottom: #9400FF 1px solid;
-        transition: all .2s ease;
+    a, a:visited {
+        color: $white;
+    }
+
+    #menu-open {
+        font-size: $fs-medium;
+    }
+
+    #menu-close {
+        display: none;
+        font-size: $fs-medium;
     }
 }
 
-.active {
-    font-weight: bold;
+@media only screen and (max-width: 1200px) {
+    nav {
+        padding: 1rem 5%;
+    }
+    .logo a {
+        font-size: $fs-medium;
+    }
+    .nav-links li a{
+        font-size: $fs-small;
+    }
 }
 
+@media only screen and (max-width: 768px) {
+    nav {
+
+        .nav-links {
+            position: absolute;
+            z-index: 1;
+            background-color: $secondary-dark;
+            top: 80px;
+            left: 0px;
+            width: 100%;
+            display: none;
+            ul {
+                flex-direction: column;
+                padding: 2rem;
+            }
+        }
+    }
+
+    nav .hamburger-menu {
+        color: $white;
+        @include flex(end);
+    }
+    
+    .nav-links.open {
+        display: block;
+    }
+
+    #menu-open.iconWeg {
+        display: none;
+    }
+    #menu-close.show {
+        display: block;
+    }
+
+}

@@ -1,31 +1,44 @@
-html {
+//Variables & mixins
+$primary-dark: #0A003C;
+$secondary-dark: #240E64;
+$neutral-grey: #c3cbda;
+$white: #fff;
+$accent: rgb(177, 70, 254);
+
+$fs-biggest: 3.5rem;
+$fs-big: 2rem;
+$fs-medium: 1.2rem;
+$fs-small: 1rem;
+$fs-smallest: .75rem;
+
+$fw-bold: 700;
+$fw-medium: 500;
+$fw-small: 300;
+
+@mixin flex($flex-y) {
+    display: flex;
+    justify-content: $flex-y;
+    align-items: center;
+}
+
+//reset
+
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Open Sans';
+    transition: all ease .2s;
+    scroll-behavior: auto smooth;
 }
 
 body {
-background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    background-color: $secondary-dark;
+    width: 100%;
+    font-family: 'Montserrat', 'Roboto';
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-  
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    font-weight: normal;
-}
-  
-ol, ul {
-    list-style: none;
-}
-  
-img {
-    max-width: 100%;
-    height: auto;
+ol, ul, li {
+    list-style-type: none;
 }
 
 a, a:visited {
@@ -33,3 +46,14 @@ a, a:visited {
     color: inherit;
 }
 
+img {
+    width: 100%;
+}
+
+.background-wrapper {
+    background: black;
+    background-size: cover;
+    background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../assets/background.jpg_large");
+    background: linear-gradient(rgba(125, 45, 238, 0.8), rgba(10, 0, 60, 0.8)), url("../assets/background.jpg_large"); /* The least supported option. */
+}

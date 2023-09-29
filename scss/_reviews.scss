@@ -1,0 +1,44 @@
+@use "_global.scss" as *;
+
+.review {
+    transform: skewX(-2deg);
+    width: 75%;
+    margin: 5% auto;
+    @include flex(center);
+    align-items: start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    &-card {
+        @include flex(start);
+box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;        flex-direction: column;
+        align-items: start;
+        border-radius: 10px;
+        width: 25%;
+        background-color: $primary-dark;
+        padding: 2rem;
+        color: $white;
+        gap: 1rem;
+        min-height: 350px;
+        .review-rating {
+            color: #FCF55F;
+        }
+        .review-summary {
+            color: $white;
+            font-size: $fs-medium;
+        }
+        .review-message {
+            font-size: $fs-small;
+            line-height: 160%;
+            color: $neutral-grey;
+        }
+        .review-location {
+            @include flex(start);
+            justify-content: start;
+            gap: .5rem;
+            p {
+                font-size: $fs-smallest;
+                font-style: italic;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@use "_global.scss" as *;
+
+.showcase-wrapper {
+    background: black;
+    background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../assets/background.jpg_large");
+    background: linear-gradient(rgba(10, 0, 60, .9), rgba(125, 45, 238, 1)), url("../assets/mewtwo_wallpaper__hd_1920x1080__by_flighterz_dc5ewlj-fullview.jpg"); /* The least supported option. */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+article {
+    padding: 30rem 0;
+    height: 100vh;
+    width: 60%;
+    @include flex(center);
+    margin: 0 auto;
+    .showcase-container {
+        @include flex(center);
+        gap: 5rem;
+        .showcase-text {
+            border-radius: 15px;
+            padding: 3rem;
+            width: 65%;
+            h2 {
+                font-size: $fs-biggest;
+                font-weight: $fw-bold;
+                color: $white;
+                line-height: 4rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: $fs-small;
+                color: $neutral-grey;
+                line-height: 1.65rem;
+                margin-bottom: 3rem;
+            }
+            a button {
+                border: 3px solid $accent;
+                background-color: transparent;
+                padding: 16px 32px;
+                color: $white;
+                cursor: pointer;
+                border-radius: 50vw;
+                font-size: $fs-medium;
+                font-weight: $fw-bold;
+                box-shadow: 0 0 300px 0 $accent;
+                
+                &:hover {
+                    background-color: $accent;
+                    box-shadow: 0 0 180px 0 $accent;
+                }
+            }
+        }
+        .showcase-img {
+            width: 35%;
+            img {
+                border-radius: 15px;
+                transform: rotate(5deg);
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            }
+        }
+    }
+}
+
+

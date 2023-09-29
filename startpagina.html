@@ -8,89 +8,157 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gloock&family=Open+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <script defer src="main.js"></script>
 </head>
 <body>
+    <div class="background-wrapper">
     <nav>
-        <a href="" class="logo">PokemonCards</a>
-
-        <div class="nav-list">
+        <div class="logo"><a href="#">PokemonCards</a></div>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars-staggered" id="menu-open"></i>
+            <i class="fa-solid fa-xmark" id="menu-close"></i>
+        </div>
+        <div class="nav-links">
             <ul>
                 <li><a class="active" href="#">Home</a></li>
-                <li><a href="./productpagina.html">Products</a></li>
-                <li><a href="./contactpagina.html">Contact</a></li>
-                <li><a class="login-btn" href="./loginpagina.html">Login</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"><span id="counter">1</span></i></a></li>
             </ul>
+            
         </div>
     </nav>
 
+    <script>
+        const menuClose = document.getElementById("menu-close")
+        const menuOpen = document.getElementById("menu-open")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuOpen.addEventListener('click',()=>{
+        navLinks.classList.toggle('open')
+        menuOpen.classList.toggle('iconWeg')
+        menuClose.classList.toggle('show')
+        })
+
+        menuClose.addEventListener('click', () => {
+            navLinks.classList.toggle('open')
+            menuClose.classList.toggle('show')
+            menuOpen.classList.toggle('iconWeg')
+        })
+    </script>
+
     <main>
-        <div class="lead">
-            <h1>Collecting <span>Dreams</span>,<br>One <span>Pokémon Card</span><br> at a Time!</h1>
-            <p>Where Memories Are Captured and Legends <span>Await!</span></p>
-            <a href="productpagina.html"><button class="primary-button">View our collection ></button></a>
+        <div class="main-container">
+            <div class="title">
+                <h1>Unleash Your Inner Trainer with Every Card!</h1>
+                <p>Discover a world of adventure, strategy, and nostalgia as you embark on your Pokémon journey with our premium selection of cards. <span>Catch 'em all, one card at a time!</span></p>
+                <button class="button-primary" role="button"><a href="#">Buy Now !</a></button>
+            </div>
+            <div class="main-img">
+                <img class="first-img" src="/assets/en_US-HGSS4-094-gengar.webp" alt="">
+                <img class="second-img" src="/assets/gengar-lv.x-arceus-ar-97.webp" alt="">
+            </div>
         </div>
-        <img src="./assets/main-cards.png" alt="pokemon cards">
-        <img class="floater" src="./assets/rayquaza-c-lv.x-diamond-pearl-promos-dp47 (1).webp" alt="">
-        <img class="floater2" src="./assets/charizard-g-lv.x-diamond-pearl-promos-dp45.webp" alt="">
     </main>
-    
-    <section>
-        <h2>New <span>legendaries</span> available for a <span>limited time</span></h2>
-        <div class="cards">
-            <div class="card" id="c1">
-                <a href="#"><img src="./assets/en_US-Promo_BW-BW36-reshiram_ex.png" alt=""></a>
-                <span>€13,99</span>
-                <h3>Legendary Reshiram</h3>
-                <div class="detail">
-                    <p>Black & White Promo Set</p>
-                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
-                </div> 
-            </div>
-            <div class="card" id="c2">
-                <a href="#"><img src="./assets/en_US-Promo_BW-BW37-kyurem_ex.webp" alt=""></a>
-                <span>€13,99</span>
-                <h3>Legendary Kyurem</h3>
-                <div class="detail">
-                    <p>Black & White Promo Set</p>
-                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
-                </div> 
-            </div>
-            <div class="card" id="c3">
-                <a href="#"><img src="./assets/en_US-Promo_BW-BW38-zekrom_ex.webp" alt=""></a>
-                <span>€13,99</span>
-                <h3>Legendary Zekrom</h3>
-                <div class="detail">
-                    <p>Black & White Promo Set</p>
-                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
-                </div> 
-            </div>
-            <div class="card" id="c4">
-                <a href="#"><img src="./assets/en_US-Promo_BW-BW45-mewtwo_ex.webp" alt=""></a>
-                <span>€13,99</span>
-                <h3>Legendary Mewtwo</h3>
-                <div class="detail">
-                    <p>Black & White Promo Set</p>
-                    <a href=""><i onmouseover="addBounce(event)" onmouseout="removeBounce(event)" id="icon" class="fa-solid fa-cart-arrow-down"></i></a>
-                </div>   
-            </div>
+    </div>
 
-        </div>  
-    </section>
-
-    <footer>
-        <span>Contactgegevens</span>
-        <div class="socials">
-            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-facebook"></i></a>
-            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-twitter"></i></a>
-            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-instagram"></i></a>
-            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-tiktok"></i></a>
-            <a href=""><i onmouseover="addFade(event)" onmouseout="removeFade(event)" class="fa-brands fa-linkedin"></i></a>
+    <div class="showcase-wrapper">
+    <article class="showcase-product">
+        <div class="showcase-container">
+            <div class="showcase-text"><h2>Limited-Time Flash Sale: Grab Your Deal Now!</h2>
+            <p>We unveil some of the most captivating and powerful Pokémon cards from the vast world of Pokémon TCG (Trading Card Game). These cards are not just collectibles; they are a testament to the rich lore, stunning artwork, and strategic depth that make Pokémon TCG an enduring and beloved game for trainers of all ages.</p>
+            <a href=""><button>Uncover More</button></a>
         </div>
-    </footer>
+        <div class="showcase-img">
+            <img src="./assets/en_US-Promo_BW-BW45-mewtwo_ex.webp" alt="">
+        </div>
+            
+        </div>
+    </article>
+    </div>
+
+    <div class="review">
+
+        <div class="review-card">
+            <div class="review-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="review-summary">Top-Notch Pokémon Card Retailer</h3>
+            <p class="review-message">"This company is a Pokémon card collector's dream come true. Their extensive selection and quality service make them my go-to for all things Pokémon."</p>
+            <div class="review-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="review-location">New York City, USA | August 8, 2023</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="review-summary">Exceptional Customer Care</h3>
+            <p class="review-message">"I had a small issue with my order, but the company's customer support team went above and beyond to resolve it quickly. Great service!"</p>
+            <div class="review-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="review-location">London, UK | September 5, 2023</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+            <h3 class="review-summary">Rare Finds Galore!</h3>
+            <p class="review-message">"I can't believe the rare Pokémon cards I've stumbled upon from this company. It's like a treasure trove for collectors, and their prices are fair."</p>
+            <div class="review-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="review-location">Tokyo, Japan | June 17, 2022</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="review-summary">Pokémon Card Paradise</h3>
+            <p class="review-message">"Every time I visit their store, I feel like a kid in a candy shop. They have cards from all generations, and it's a must-visit for any Pokémon enthusiast."</p>
+            <div class="review-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="review-location">Djoppenbiek - September 28, 2022</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="review-summary">Reliable and Trustworthy</h3>
+            <p class="review-message">"I've been buying Pokémon cards from this company for years, and they've never let me down. Authentic cards and speedy delivery every time."</p>
+            <div class="review-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="review-location">Sydney, Australia | April 12, 2023</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

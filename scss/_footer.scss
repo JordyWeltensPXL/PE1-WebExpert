@@ -1,0 +1,97 @@
+@use "_global.scss" as *;
+
+
+.footer {
+    @include flex(start);
+    align-items: start;
+    justify-content: space-between;
+    background-color: $primary-dark;
+    gap: 10rem;
+    padding: 5%;
+
+    .footer-socials {
+        @include flex(start);
+        align-items: start;
+        flex-direction: column;
+        gap: 2rem;
+
+        h4 {
+            font-size: $fs-big;
+            color: $white;
+            font-weight: $fw-bold;
+        }
+    }    
+
+    .socials {
+        font-size: $fs-big;
+        @include flex(center);
+        gap: 2rem;
+        i {
+            background-color: $accent;
+            border-radius: 5px;
+            padding: 1rem;
+            color: $white;
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+    p {
+        font-size: $fs-smallest;
+        font-style: italic;
+        color: $neutral-grey;
+        text-align: center;
+    }
+    .footer-links {
+        @include flex(center);
+        align-items: start;
+        gap: 5rem;
+        color: $white;
+        .list-column {
+            @include flex(center);
+            align-items: start;
+            flex-direction: column;
+            gap: 1.5rem;
+            color: $neutral-grey;
+            .list-title {
+                color: $white;
+                font-size: $fs-medium;
+                font-weight: $fw-bold;
+            }
+            .list-link:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        gap: 5rem;
+        flex-direction: column;
+        padding: 5%;
+        .footer-socials {
+            width: 100%;
+            align-items: center;
+        }
+        .footer-links {
+            width: 100%;
+            align-items: start;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .footer {
+        gap: 0;
+        .footer-socials {
+            margin-bottom: 2rem;
+            .socials {
+                gap: .5rem;
+            }
+        }
+        .footer-links {
+            gap: 3rem;
+        }
+    }
+}

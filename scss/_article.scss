@@ -33,7 +33,7 @@ article {
             p {
                 font-size: $fs-small;
                 color: $neutral-grey;
-                line-height: 1.65rem;
+                line-height: 1.7;
                 margin-bottom: 3rem;
             }
             a button {
@@ -45,11 +45,11 @@ article {
                 border-radius: 50vw;
                 font-size: $fs-medium;
                 font-weight: $fw-bold;
-                box-shadow: 0 0 300px 0 $accent;
+                box-shadow: 0 0 100px 0 $accent;
                 
                 &:hover {
                     background-color: $accent;
-                    box-shadow: 0 0 180px 0 $accent;
+                    box-shadow: 0 0 75px 0 $accent;
                 }
             }
         }
@@ -60,8 +60,49 @@ article {
                 transform: rotate(5deg);
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
             }
+            img:hover {transform: rotate(7deg) scale(1.1);
+                box-shadow: 0 0 200px 0 $accent;
+            }
         }
     }
 }
+
+@media screen and (max-width: 1420px) {
+    .showcase-title {
+        background-color: red;
+        font-size: $fs-small;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        padding: 5rem 0;
+        height: 100vh;
+        width: 100%;
+        .showcase-container {
+            position: relative;
+            width: 100%;
+            justify-content: start;
+            .showcase-text {
+                width: 100%;
+                h2 {
+                    font-size: $fs-small;
+                    line-height: normal;
+                }
+
+                }
+                }
+                .showcase-img {
+                    img {
+                        position: absolute;
+                        width: 30%;
+                        top: 75px;
+                        right: 30px;
+                    }
+            }
+        }
+    }
+
+
 
 

@@ -7,6 +7,7 @@ main {
         gap: 10%;
         padding: 0 10%;
         height: 100vh;
+        overflow: hidden;
         .title {
             @include flex(start);
             align-items: start;
@@ -70,33 +71,93 @@ main {
 
 /* BUTTON CSS */
 .button-primary {
-    margin-top: 3rem;
-  padding: 15px 30px 15px 0;
-  text-align: center;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-image: linear-gradient(90deg, #3AAef8 0%, #B146FE  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    margin-top: 2%;
+    padding: 15px 30px 15px 0;
+    text-align: center;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: $fw-bold;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-image: linear-gradient(90deg, #3AAef8 0%, #B146FE  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .button-primary:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-  transform: translateY(-3px);
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-3px);
 }
 
 .button-primary:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 }
+
+@media screen and (max-width: 1111px) {
+
+    main {
+        .main-container {
+            gap: 0;
+            padding: 0;
+            width: 100%;
+        }
+    
+        .title {
+            margin-left: 5%;
+            width: 50%;
+        }
+        .main-img {
+            width: 50%;
+            .first-img {
+                top: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        .main-container {
+            padding: 0;
+            .title {
+                width: 65%;
+                h1 {
+                    font-size: $fs-big;
+                }
+                p {
+                    font-size: $fs-small;
+                }
+            }
+        }
+    }
+
+    .main-img {
+        .first-img {
+            width: 225px;
+            right: 10px;
+        }
+        .second-img {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-img {
+        .first-img {
+            width: 150px
+        }
+        .second-img {
+            display: none;
+        }
+    }
+}
+
 

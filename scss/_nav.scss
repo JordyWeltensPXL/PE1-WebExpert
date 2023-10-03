@@ -2,7 +2,7 @@
 
 nav {
     @include flex(space-between);
-    padding: 1rem 14.5%;
+    padding: 1rem 15%;
     backdrop-filter: blur(px);
     position: relative;
     z-index: 55555;

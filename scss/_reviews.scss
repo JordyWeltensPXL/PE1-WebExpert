@@ -29,6 +29,8 @@
         min-width: 250px;
         .review-rating {
             color: #FCF55F;
+            @include flex(center);
+            align-items: start;
         }
         .review-summary {
             color: $white;
@@ -47,6 +49,10 @@
                 font-size: $fs-smallest;
                 font-style: italic;
             }
+        }
+        .review-number {
+            color: $neutral-grey;
+            padding-left: .5rem;
         }
     }
 }

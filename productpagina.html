@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productpagina PokemonCards - PE1 Web-Expert Concept</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script defer src="main.js"></script>
+
+</head>
+<body>
+    <div class="background-wrapper">
+    <nav>
+        <div class="logo"><a href="./startpagina.html">PokemonCards</a></div>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars-staggered" id="menu-open"></i>
+            <i class="fa-solid fa-xmark" id="menu-close"></i>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a class="active" href="./startpagina.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"><span id="counter">1</span></i></a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <script>
+        const menuClose = document.getElementById("menu-close")
+        const menuOpen = document.getElementById("menu-open")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuOpen.addEventListener('click',()=>{
+        navLinks.classList.toggle('open')
+        menuOpen.classList.toggle('iconWeg')
+        menuClose.classList.toggle('show')
+        })
+
+        menuClose.addEventListener('click', () => {
+            navLinks.classList.toggle('open')
+            menuClose.classList.toggle('show')
+            menuOpen.classList.toggle('iconWeg')
+        })
+    </script>
+
+    <div class="filter-section">
+
+    <aside class="filter">
+        <h3 class="filter-title">Filter by</h3>
+
+        <h4 class="filter-category">Card Type</h4>
+        <ul>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="coding" name="" value="" />
+                    <label for="coding">Legendary</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="regular" name="" value="" />
+                    <label for="regular">Regular</label>
+                </div>
+            </li>
+        </ul>
+
+        <h4 class="filter-category">Pokemon Typing</h4>
+        <ul>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="normal" name="" value="" />
+                    <label for="normal">Normal</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="fire" name="" value="" />
+                    <label for="fire">Fire</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="water" name="" value="" />
+                    <label for="water">Water</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="grass" name="" value="" />
+                    <label for="grass">Grass</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="electric" name="" value="" />
+                    <label for="electric">Electric</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="ice" name="" value="" />
+                    <label for="ice">Ice</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="fighting" name="" value="" />
+                    <label for="fighting">Fighting</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="poison" name="" value="" />
+                    <label for="poison">Poison</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="ground" name="" value="" />
+                    <label for="ground">Ground</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="flying" name="" value="" />
+                    <label for="flying">Flying</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="psychic" name="" value="" />
+                    <label for="psychic">Psychic</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="bug" name="" value="" />
+                    <label for="bug">Bug</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="rock" name="" value="" />
+                    <label for="rock">Rock</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="ghost" name="" value="" />
+                    <label for="ghost">Ghost</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="dragon" name="" value="" />
+                    <label for="dragon">Dragon</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="dark" name="" value="" />
+                    <label for="dark">Dark</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="steel" name="" value="" />
+                    <label for="steel">Steel</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="fairy" name="" value="" />
+                    <label for="fairy">Fairy</label>
+                </div>
+            </li>
+        </ul>
+
+        <h4 class="filter-category">Price</h4>
+        <ul>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="price-asc" name="" value="" />
+                    <label for="price-asc">Ascending (low-high)</label>
+                </div>
+            </li>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="price-desc" name="" value="" />
+                    <label for="price-desc">Descending (high-low)</label>
+                </div>
+            </li>
+        </ul>
+
+        <h4 class="filter-category">Availability</h4>
+        <ul>
+            <li>
+                <div class="filter-type">
+                    <input type="checkbox" id="stock" name="" value="" />
+                    <label for="stock">Show In Stock Only</label>
+                </div>
+            </li>
+        </ul>
+
+
+    </aside>
+
+    <div class="catalog">
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Mewtwo</h2>
+            <div class="product-img">
+                <img src="./assets/en_US-Promo_BW-BW45-mewtwo_ex.webp" alt="">
+            </div>
+            <div class="product-description">
+                
+                <div class="prices"><span class="product-new-price">€ 3,49</span><span class="product-old-price">€ 6,99</span></div><br>   
+                <div class="buttons"><a href=""><button class="button-primary">Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Kyurem</h2>
+            <div class="product-img">
+                <img src="./assets/en_US-Promo_BW-BW37-kyurem_ex.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Charizard</h2>
+            <div class="product-img">
+                <img src="./assets/charizard-g-lv.x-diamond-pearl-promos-dp45.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 1,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Gengar</h2>
+            <div class="product-img">
+                <img src="./assets/gengar-lv.x-arceus-ar-97.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 1,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Rayquaza</h2>
+            <div class="product-img">
+                <img src="./assets/rayquaza-c-lv.x-diamond-pearl-promos-dp47 (1).webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Reshiram</h2>
+            <div class="product-img">
+                <img src="./assets/en_US-Promo_BW-BW36-reshiram_ex.png" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Zekrom</h2>
+            <div class="product-img">
+                <img src="./assets/en_US-Promo_BW-BW38-zekrom_ex.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Darkrai</h2>
+            <div class="product-img">
+                <img src="./assets/darkrai.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Dialga</h2>
+            <div class="product-img">
+                <img src="./assets/dialga.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>                                                               
+        <div class="catalog-product">
+            <h2 class="product-title">Legendary Palkia</h2>
+            <div class="product-img">
+                <img src="./assets/palkia.webp" alt="">
+            </div>
+            <div class="product-description"> 
+                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
+                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            </div>
+        </div>
+        <div class="pages">
+            <ul>
+                <a href="">
+                    <li>1</li>
+                </a><a href="">
+                <a href="">
+                    <li class="page-active">1</li>
+                </a><a href="">
+                    <li>2</li>
+                </a><a href="">
+                    <li>3</li>
+                </a><a href="">
+                    <li>4</li>
+                </a><a href="">
+                    <li>5</li>
+                </a><a href="">
+                    <li>...</li>
+                </a>
+                </a><a href="">
+                    <li>17</li>
+                </a>
+            </ul>
+        </div>                                                               
+    </div>
+    
+</div>
+</div>
+    
+
+
+<footer class="footer">
+    <div class="footer-socials">
+        <h4>PokemonCards inc.</h4>
+        <div class="socials">
+            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-square-snapchat"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>PokemonCards 2023. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-links">
+        <ul class="list-column">
+            <li class="list-title">Company.</li>
+            <li class="list-link"><a href="">Advertise</a></li>
+            <li class="list-link"><a href="">World Data</a></li>
+            <li class="list-link"><a href="">Blog</a></li>
+        </ul>
+        <ul class="list-column">
+            <li class="list-title">Help center.</li>
+            <li class="list-link"><a href="">FAQ</a></li>
+            <li class="list-link"><a href="">Careers</a></li>
+            <li class="list-link"><a href="">Contact us</a></li>
+        </ul>
+        <ul class="list-column">
+            <li class="list-title">Legal.</li>
+            <li class="list-link"><a href="">Privacy Policy</a></li>
+            <li class="list-link"><a href="">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

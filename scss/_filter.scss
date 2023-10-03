@@ -1,0 +1,136 @@
+@use "_global.scss" as *;
+
+.filter-section {
+    @include flex(center);
+    align-items: start;
+    width: 100%;
+    padding: 5% 5%;
+}
+
+.filter {
+    width: 20%;
+    background-color: red;
+    padding: 2%;
+    background-color: #0a003c25;
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
+
+    &-title {
+        color: $white;
+        font-size: $fs-big;
+    }
+    &-category {
+        color: $white;
+        font-size: $fs-medium;
+        padding-block: 1.5rem .2rem;
+    }
+    &-type {
+        margin: .5rem;
+    }
+    label {
+        color: $white;
+        margin-left: .5rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.catalog {
+    @include flex(center);
+    width: 80%;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    padding-inline: 2%;
+    gap: 1.5rem;
+    // background-color: #0a003c60;
+    // border-radius: 15px;
+    &-product {
+        padding: 1rem;
+        background-color: #0a003c18;
+        @include flex(start);
+        flex-wrap: wrap;
+        width: 18%;
+        
+        h2 {
+            color: $neutral-grey;
+            text-transform: uppercase;
+            font-size: $fs-smallest;
+            margin-bottom: 1rem;
+        }
+        img {
+            border-radius: 15px;
+        }
+    }
+    .product-description {
+
+        .prices {
+            @include flex(start);
+            gap: 1rem;
+        }
+        .product-old-price {
+            color: red;
+            font-size: $fs-small;
+            font-weight: $fw-bold;
+            text-decoration: line-through;
+        }
+        
+        .product-new-price {
+            font-size: $fs-medium;
+            color: $white;
+            font-weight: $fw-medium;
+            display: block;
+            margin-top: .5rem;
+        }
+        button {
+            padding: 12px 24px;
+            border: none;
+            font-size: $fs-smallest;
+            font-weight: $fw-bold;
+            background-color: $accent;
+            color: $white;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%
+        }
+
+        .buttons {
+            @include flex(start);
+            align-items: end;
+            gap: 1rem;
+        }
+
+        .button-tertiary {
+            text-decoration: underline;
+            color: $white;
+            font-size: $fs-smallest;
+        }
+    }
+}
+.pages {
+    margin-top: 3rem;
+    ul {
+        @include flex(center);
+    }
+    li {
+        border-radius: 0 0 0 5px;
+        margin: .5rem;
+        padding: .5rem .75rem;
+        background-color: $secondary-dark;
+        color: $white;
+        border: .1px solid $accent;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-dark;
+        }
+    }
+    .page-active {
+        background-color: $accent;
+        &:hover {
+            background-color: $accent;
+        }
+    }
+    
+}

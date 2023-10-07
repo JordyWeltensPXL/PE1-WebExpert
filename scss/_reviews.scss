@@ -7,7 +7,7 @@
         font-size: $fs-big;
         width: 100%;
     }
-    transform: skewX(-2deg);
+
     width: 75%;
     margin: 5% auto;
     @include flex(center);
@@ -15,6 +15,7 @@
     gap: 3rem;
     flex-wrap: wrap;
     &-card {
+        transform: skewX(-2deg);
         @include flex(start);
         box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
         flex-direction: column;
@@ -27,6 +28,10 @@
         gap: 1rem;
         min-height: 350px;
         min-width: 250px;
+        border: 2px solid $primary-dark;
+        &:hover {
+            border: 2px solid $accent;
+        }
         .review-rating {
             color: #FCF55F;
             @include flex(center);
@@ -60,7 +65,6 @@
 @media only screen and (max-width: 768px) {
 
     .review {
-        transform: none;
         width: 100%;
         gap: 0rem;
         h2 {
@@ -68,6 +72,7 @@
         }
     }
     .review-card {
+        transform: none;
         min-height: 200px;
         width: 100%;
         margin: 3%;

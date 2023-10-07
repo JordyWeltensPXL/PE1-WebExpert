@@ -90,6 +90,10 @@ nav {
             ul {
                 flex-direction: column;
                 padding: 2rem;
+                align-items: end;
+            }
+            a {
+                font-size: $fs-big;
             }
         }
     }

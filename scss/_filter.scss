@@ -5,16 +5,22 @@
     align-items: start;
     width: 100%;
     padding: 5% 5%;
+    gap: 5rem;
+    background-color: $secondary-dark;
 }
 
+.filter-icon {
+    display: none;
+}
+
+
 .filter {
-    width: 20%;
-    background-color: red;
     padding: 2%;
-    background-color: #0a003c25;
+    background-color: $primary-dark;
     border-radius: 10px;
     user-select: none;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    width: 20%;
 
 
     &-title {
@@ -38,79 +44,61 @@
     }
 }
 
-.catalog {
-    @include flex(center);
-    width: 80%;
-    flex-wrap: wrap;
-    margin-left: 3%;
-    padding-inline: 2%;
-    gap: 1.5rem;
-    // background-color: #0a003c60;
-    // border-radius: 15px;
-    &-product {
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 70%;
+
+    .catalog-card {
         padding: 1rem;
-        background-color: #0a003c18;
-        @include flex(start);
-        flex-wrap: wrap;
-        width: 18%;
-        
-        h2 {
-            color: $neutral-grey;
-            text-transform: uppercase;
-            font-size: $fs-smallest;
-            margin-bottom: 1rem;
+        border-radius: 15px;
+        color: $white;
+        border: 1px solid $secondary-dark;
+        &:hover {
+            border: 1px solid $accent;
         }
-        img {
+        
+        .card-img {
             border-radius: 15px;
         }
-    }
-    .product-description {
 
-        .prices {
-            @include flex(start);
-            gap: 1rem;
+        .card-title {
+            font-size: $fs-big;
+            padding-block: .5rem;
+            font-weight: $fw-bold;
         }
-        .product-old-price {
-            color: red;
+        .card-desc {
             font-size: $fs-small;
-            font-weight: $fw-bold;
-            text-decoration: line-through;
+            line-height: 1.4;
         }
-        
-        .product-new-price {
-            font-size: $fs-medium;
-            color: $white;
-            font-weight: $fw-medium;
+        .card-price {
+            text-align: start;
             display: block;
-            margin-top: .5rem;
+            padding-block: 1rem;
+            font-size: $fs-medium;
         }
-        button {
-            padding: 12px 24px;
-            border: none;
-            font-size: $fs-smallest;
-            font-weight: $fw-bold;
+        .card-button {
+            display: block;
+            width: 100%;
             background-color: $accent;
             color: $white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: none;
+            font-size: $fs-small;
+            font-weight: $fw-bold;
             cursor: pointer;
-            border-radius: 5px;
-            width: 100%
-        }
-
-        .buttons {
-            @include flex(start);
-            align-items: end;
-            gap: 1rem;
-        }
-
-        .button-tertiary {
-            text-decoration: underline;
-            color: $white;
-            font-size: $fs-smallest;
+            &:hover {
+                background-color: #942fe6;
+            }
         }
     }
 }
+
 .pages {
-    margin-top: 3rem;
+    padding-bottom: 5%;
+    background-color: $secondary-dark;
     ul {
         @include flex(center);
     }
@@ -133,4 +121,61 @@
         }
     }
     
+}
+@media screen and (max-width: 1400px) {
+    .filter {
+        width: 35%;
+    }
+    .catalog-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .filter-section {
+        flex-direction: column;
+        padding: 2%;
+        gap: 0;
+    }
+    .filter {
+        min-width: 100%;
+        padding: 3rem;
+        display: none;
+    }
+    .catalog-card {
+        min-width: 100%;
+    }
+    .filter-two-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filter-three-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .filter-icon {
+        display: block;
+        color: $white;
+        background-color: $accent;
+        cursor: pointer;
+        font-size: $fs-medium;
+        border-radius: 50px;
+        padding: 1rem;
+        align-self: end;
+        margin-right: 3%;
+        margin-block: 2%;
+    }
+    .open {
+        display: block;
+    }
 }

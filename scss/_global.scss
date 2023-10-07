@@ -31,28 +31,6 @@ $fw-small: 300;
     scroll-behavior: auto smooth;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: $primary-dark;
-    border-radius: 15px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-background: inherit;
-    border-radius: 15px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $secondary-dark;
-  }
-
 body {
     background-color: $secondary-dark;
     width: 100%;

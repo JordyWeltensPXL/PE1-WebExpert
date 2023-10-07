@@ -25,7 +25,7 @@
                 <li><a class="active" href="./startpagina.html">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="">Contact us</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="./loginpagina.html">Login</a></li>
                 <li><a href=""><i class="fa-solid fa-cart-shopping"><span id="counter">1</span></i></a></li>
             </ul>
             
@@ -50,13 +50,26 @@
         })
     </script>
 
-    <div class="filter-section">
 
-    <aside class="filter">
+
+    <div class="filter-section">
+        <div class="filter-icon" id="filter-icon"><i class="fa-sharp fa-solid fa-filter"></i> Filter</div>
+
+        <aside class="filter open" id="filter">
+        
+            <script>
+                const filterIcon = document.getElementById("filter-icon")
+                const filter = document.getElementById("filter")
+            
+                filterIcon.addEventListener('click',()=>{
+                filter.classList.toggle('open')
+                })
+            </script>
+
         <h3 class="filter-title">Filter by</h3>
 
         <h4 class="filter-category">Card Type</h4>
-        <ul>
+        <ul class="filter-two-columns">
             <li>
                 <div class="filter-type">
                     <input type="checkbox" id="coding" name="" value="" />
@@ -72,7 +85,7 @@
         </ul>
 
         <h4 class="filter-category">Pokemon Typing</h4>
-        <ul>
+        <ul class="filter-three-columns">
             <li>
                 <div class="filter-type">
                     <input type="checkbox" id="normal" name="" value="" />
@@ -184,17 +197,17 @@
         </ul>
 
         <h4 class="filter-category">Price</h4>
-        <ul>
+        <ul class="filter-two-columns">
             <li>
                 <div class="filter-type">
                     <input type="checkbox" id="price-asc" name="" value="" />
-                    <label for="price-asc">Ascending (low-high)</label>
+                    <label for="price-asc">Low To High</label>
                 </div>
             </li>
             <li>
                 <div class="filter-type">
                     <input type="checkbox" id="price-desc" name="" value="" />
-                    <label for="price-desc">Descending (high-low)</label>
+                    <label for="price-desc">High To Low</label>
                 </div>
             </li>
         </ul>
@@ -210,136 +223,92 @@
         </ul>
 
 
-    </aside>
+        </aside>
 
-    <div class="catalog">
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Mewtwo</h2>
-            <div class="product-img">
-                <img src="./assets/en_US-Promo_BW-BW45-mewtwo_ex.webp" alt="">
+        <div class="catalog-container">
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-            <div class="product-description">
-                
-                <div class="prices"><span class="product-new-price">€ 3,49</span><span class="product-old-price">€ 6,99</span></div><br>   
-                <div class="buttons"><a href=""><button class="button-primary">Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-        </div>                                
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Kyurem</h2>
-            <div class="product-img">
-                <img src="./assets/en_US-Promo_BW-BW37-kyurem_ex.webp" alt="">
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Charizard</h2>
-            <div class="product-img">
-                <img src="./assets/charizard-g-lv.x-diamond-pearl-promos-dp45.webp" alt="">
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 1,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Gengar</h2>
-            <div class="product-img">
-                <img src="./assets/gengar-lv.x-arceus-ar-97.webp" alt="">
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 1,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Rayquaza</h2>
-            <div class="product-img">
-                <img src="./assets/rayquaza-c-lv.x-diamond-pearl-promos-dp47 (1).webp" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Reshiram</h2>
-            <div class="product-img">
-                <img src="./assets/en_US-Promo_BW-BW36-reshiram_ex.png" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Zekrom</h2>
-            <div class="product-img">
-                <img src="./assets/en_US-Promo_BW-BW38-zekrom_ex.webp" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Darkrai</h2>
-            <div class="product-img">
-                <img src="./assets/darkrai.webp" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Dialga</h2>
-            <div class="product-img">
-                <img src="./assets/dialga.webp" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
-            </div>
-        </div>                                                               
-        <div class="catalog-product">
-            <h2 class="product-title">Legendary Palkia</h2>
-            <div class="product-img">
-                <img src="./assets/palkia.webp" alt="">
-            </div>
-            <div class="product-description"> 
-                <div class="prices"><span class="product-new-price">€ 6,99</span><span class="product-old-price"></span></div><br>   
-                <div class="buttons"><a href=""><button>Add to cart</button></a><a class="button-tertiary" href="">More Info</a></div>
+            <div class="catalog-card">
+                <a href="./detailpagina.html"><img src="./assets/infernape.webp" alt="" class="card-img"></a>
+                <h2 class="card-title">Infernape</h2>
+                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quam.</p>
+                <span class="card-price">€ 3,99</span>
+                <a href="#"><button class="card-button">Add to cart</button></a>
             </div>
         </div>
-        <div class="pages">
-            <ul>
-                <a href="">
-                    <li>1</li>
-                </a><a href="">
-                <a href="">
-                    <li class="page-active">1</li>
-                </a><a href="">
-                    <li>2</li>
-                </a><a href="">
-                    <li>3</li>
-                </a><a href="">
-                    <li>4</li>
-                </a><a href="">
-                    <li>5</li>
-                </a><a href="">
-                    <li>...</li>
-                </a>
-                </a><a href="">
-                    <li>17</li>
-                </a>
-            </ul>
-        </div>                                                               
-    </div>
     
-</div>
+    </div>
+
+    <div class="pages">
+        <ul>
+            <a href="">
+                <li>1</li>
+            </a><a href="">
+            <a href="">
+                <li class="page-active">1</li>
+            </a><a href="">
+                <li>2</li>
+            </a><a href="">
+                <li>3</li>
+            </a><a href="">
+                <li>4</li>
+            </a><a href="">
+                <li>5</li>
+            </a><a href="">
+                <li>...</li>
+            </a>
+            </a><a href="">
+                <li>17</li>
+            </a>
+        </ul>
+    </div> 
 </div>
     
 

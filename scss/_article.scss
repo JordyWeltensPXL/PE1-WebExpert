@@ -4,7 +4,7 @@
     background: black;
     background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../assets/background.jpg_large");
-    background: linear-gradient(rgba(10, 0, 60, .9), rgba(125, 45, 238, 1)), url("../assets/mewtwo_wallpaper__hd_1920x1080__by_flighterz_dc5ewlj-fullview.jpg"); /* The least supported option. */
+    background: linear-gradient(rgba(10, 0, 60, .1), rgba(125, 45, 238, .7));
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -13,7 +13,7 @@
 article {
     padding: 30rem 0;
     height: 100vh;
-    width: 60%;
+    width: 80%;
     @include flex(center);
     margin: 0 auto;
     .showcase-container {
@@ -23,7 +23,7 @@ article {
             border-radius: 15px;
             padding: 3rem;
             width: 65%;
-            h2 {
+            .showcase-title {
                 font-size: $fs-biggest;
                 font-weight: $fw-bold;
                 color: $white;
@@ -54,7 +54,7 @@ article {
             }
         }
         .showcase-img {
-            width: 35%;
+            width: 25%;
             img {
                 border-radius: 15px;
                 transform: rotate(5deg);
@@ -68,10 +68,17 @@ article {
 }
 
 @media screen and (max-width: 1420px) {
-    .showcase-title {
-        background-color: red;
-        font-size: $fs-small;
+    .showcase-text {
+        .showcase-title {
+            font-size: $fs-big !important;
+            line-height: normal !important;
+        }
+        p {
+            font-size: $fs-smallest !important;
+        }
     }
+    
+    
 }
 
 @media screen and (max-width: 768px) {
